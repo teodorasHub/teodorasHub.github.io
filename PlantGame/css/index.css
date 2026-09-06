@@ -1,0 +1,17 @@
+/* Teodora Kovacevic, teko5467; Isabella Wideman, iswi1331; Alex Klingvall, alkl3971 */
+/* Grundstil för spel-canvas i iframe */
+body {
+    margin: 0;
+    background: transparent;
+    height: 100vh;
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    /* Skarp pixel-look */
+    image-rendering: pixelated;
+}
