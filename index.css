@@ -1,17 +1,171 @@
-/* Teodora Kovacevic, teko5467; Isabella Wideman, iswi1331; Alex Klingvall, alkl3971 */
-/* Grundstil för spel-canvas i iframe */
+/*Teodora Kovacevic, teko5467*/
 body {
     margin: 0;
-    background: transparent;
-    height: 100vh;
-    overflow: hidden;
+    font-family: Tahoma, Verdana, sans-serif;
+    background-image: url("../images/winXP.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-canvas {
-    display: block;
-    background: transparent;
-    width: 100%;
+/* Själva fönstret som kan dras runt */
+.xp-window {
+    position: absolute; /* gör att fönstret kan flyttas */
+    top: 50px;
+    left: 50px;
+    width: 900px;
+    max-width: 95%;
+    background: #ece9d8;
+    border: 2px solid #0a246a;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(1px);
+    box-sizing: border-box;
+    z-index: 100; /* alltid ovanpå andra element */
+}
+
+/* Blå titelbar överst på fönstret */
+.xp-titlebar {
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 8px;
+    background: linear-gradient(to bottom, #3486e8 0%, #1c5ada 20%);
+    box-sizing: border-box;
+}
+
+/* Start knappen till vänster */
+.xp-start {
     height: 100%;
-    /* Skarp pixel-look */
-    image-rendering: pixelated;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 13px;
+    color: white;
+    background: linear-gradient(to bottom, #40A541 0%, #278728 100%);
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    box-shadow:
+        inset -2px 0 0 rgba(0, 0, 0, 0.25),
+        inset 1px 0 0 rgba(255, 255, 255, 0.25);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 1);
+    flex-shrink: 0;
+}
+
+.xp-menu {
+    display: flex;
+    gap: 6px; /* lite mellanrum mellan knapparna */
+    flex-shrink: 0;
+}
+
+/* Styling för alla menyknappar */
+.xp-button {
+    background: linear-gradient(to bottom,
+            #ffffff 0%,
+            #0b99ee 10%);
+    border: 1px solid #7f9db9;
+    border-radius: 3px;
+    padding: 3px 10px;
+    font-size: 12px;
+    font-family: Tahoma, Verdana, sans-serif;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+ /* Effekten när man hovrar över knapparna */
+.xp-button:hover {
+    background: linear-gradient(to bottom,
+            #fefefe 0%,
+            #cfe1f7 100%);
+}
+ /* Markerar aktiv sida */
+.xp-button.active {
+    background: linear-gradient(to bottom,
+            #cfe1f7 0%,
+            #7aa5e3 100%);
+    border: 1px inset #7f9db9;
+}
+
+.xp-content {
+    padding: 16px;
+}
+
+.xp-iframe {
+    width: 100%;
+    height: 650px;
+    border: 2px solid #1c5ada;
+    background: #1c5ada;
+    box-sizing: border-box;
+}
+
+/* Centrera profilbilden, rundad med skuggor */
+.profile-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #ece9d8;
+    border: 2px solid #7f9db9;
+    box-shadow:
+        inset 1px 1px 0 rgba(255, 255, 255, 0.7),
+        inset -1px -1px 0 rgba(0, 0, 0, 0.3),
+        2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Diskussion - text-sida styling */
+
+.discussion {
+    background: #ffffff;           
+    max-width: 700px;              /* smalare som ett dokument */
+    margin: 0 auto;                
+    padding: 28px 32px;          
+
+    border: 1px solid #7f9db9;     
+    
+    /* lätt inset-look som gamla program */
+    box-shadow:
+        inset 1px 1px 0 #ffffff,
+        inset -1px -1px 0 #c0c0c0;
+
+    line-height: 1.6;
+    font-size: 14px;
+
+    font-family: "Courier New", monospace;
+    font-weight: 600;
+
+    
+    box-shadow:
+        3px 3px 8px rgba(0,0,0,0.25),
+        inset 1px 1px 0 #fff,
+        inset -1px -1px 0 #c0c0c0;
+}
+
+.discussion h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.discussion h2 {
+    font-size: 16px;
+    margin-top: 26px;
+    margin-bottom: 8px;
+    color: #0a246a;
+    border-bottom: 1px solid #d6d6d6; 
+    padding-bottom: 3px;
+}
+
+.discussion p {
+    margin-bottom: 14px;
+    text-align: left;   
 }
