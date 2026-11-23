@@ -1,0 +1,70 @@
+<!-- Teodora Kovacevic, teko5467 -->
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big-O Quiz</title>
+
+    <!-- Stilmallar: generell för portofolio samt specifikt för quizzet -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/quiz.css">
+
+    <!-- JS-bibliotek och egna skript, 
+     quiz som hanterar logiken bakom quizzet, 
+     och drag som gör att fönstret kan flyttas runt -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/drag.js"></script>
+
+</head>
+
+<body>
+
+    <div class="xp-window">
+
+        <nav class="xp-titlebar">
+            <div class="xp-start">Teodora</div>
+
+            <div class="xp-menu">
+                <a href="index.html" class="xp-button">Hem</a>
+                <a href="about.html" class="xp-button">Om mig</a>
+                <a href="projects.html" class="xp-button">Diskussion</a>
+                <a href="quiz.html" class="xp-button">Big-O Quiz</a>
+                <a href="mathgame.html" class="xp-button">Matematikspel</a>
+                <a href="plantgame.html" class="xp-button">Plant Game</a>
+                <a href="plantGameDiscussion.html" class="xp-button">Om PlantGame</a>
+            </div>
+        </nav>
+
+        <div class="xp-content">
+
+            <h1>Big-O Quiz</h1>
+            <p>Testa dina kunskaper om tidskomplexitet!</p>
+
+            <!-- QUIZ börjar -->
+            <div id="quiz-container">
+
+                <p id="question"></p> <!-- Här lägger JS in själva frågan -->
+
+                <form id="answers"></form> <!-- Alternativen läggs in här -->
+
+                <button id="submit" class="xp-button">Svara</button>
+
+                <button id="next" class="xp-button" style="display:none;"> Nästa fråga </button>
+                <!-- Visas först efter man svarat -->
+
+                <p id="feedback"></p>
+                <p id="score"></p>
+
+                <button id="restart" class="xp-button" style="display:none;">
+                    Starta om
+                </button>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

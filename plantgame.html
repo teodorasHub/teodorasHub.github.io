@@ -1,0 +1,42 @@
+<!-- Portfolio-sida som bäddar in Plant Game i XP-fönster -->
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Game</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- JS-bibliotek och egna skript, 
+     drag som gör att fönstret kan flyttas runt -->
+    <script src="js/drag.js"></script>
+</head>
+
+<body>
+
+    <div class="xp-window">
+        <nav class="xp-titlebar">
+            <div class="xp-start">Teodora</div>
+
+            <div class="xp-menu">
+                <a href="index.html" class="xp-button">Hem</a>
+                <a href="about.html" class="xp-button">Om mig</a>
+                <a href="projects.html" class="xp-button">Diskussion</a>
+                <a href="quiz.html" class="xp-button">Big-O Quiz</a>
+                <a href="mathgame.html" class="xp-button">Matematikspel</a>
+                <a href="plantgame.html" class="xp-button">Plant Game</a>
+                <a href="plantGameDiscussion.html" class="xp-button">Om PlantGame</a>
+            </div>
+        </nav>
+
+        <div class="xp-content">
+            <h1>Plant Game</h1>
+            <iframe class="xp-iframe" src="PlantGame/index.html" title="Plant Game"></iframe>
+        </div>
+    </div>
+
+</body>
+
+</html>

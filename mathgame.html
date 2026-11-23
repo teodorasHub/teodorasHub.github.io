@@ -1,0 +1,73 @@
+<!-- Mattespelet, visat i samma XP-fönster som övriga portfolion -->
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mattespel</title>
+
+    <!-- Stilmallar: generell för portofolio samt specifikt för quizzet -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/mathgame.css">
+
+    <!-- JS-bibliotek och egna skript, 
+     quiz som hanterar logiken bakom quizzet, 
+     och drag som gör att fönstret kan flyttas runt -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/drag.js"></script>
+    <script src="js/mathgame.js" defer></script>
+
+</head>
+
+<body>
+
+    <div class="xp-window">
+        <nav class="xp-titlebar">
+            <div class="xp-start">Teodora</div>
+
+            <div class="xp-menu">
+                <a href="index.html" class="xp-button">Hem</a>
+                <a href="about.html" class="xp-button">Om mig</a>
+                <a href="projects.html" class="xp-button">Diskussion</a>
+                <a href="quiz.html" class="xp-button">Big-O Quiz</a>
+                <a href="mathgame.html" class="xp-button">Matematikspel</a>
+                <a href="plantgame.html" class="xp-button">Plant Game</a>
+                <a href="plantGameDiscussion.html" class="xp-button">Om PlantGame</a>
+
+            </div>
+        </nav>
+
+        <div class="container">
+            <h1>Mattespel</h1>
+
+            <h3>Välj räknesätt:</h3>
+
+            <label>
+                <input type="radio" name="operation" value="add"> Addition
+            </label>
+
+            <label>
+                <input type="radio" name="operation" value="sub"> Subtraktion
+            </label>
+
+            <label>
+                <input type="radio" name="operation" value="mul"> Multiplikation
+            </label>
+
+            <br><br>
+
+            <button id="newExpressionBtn">Visa nytt uttryck</button>
+
+            <h2 id="expression"></h2>
+
+            <input type="number" id="answerInput" placeholder="Skriv ditt svar">
+            <button id="submitBtn">Skicka ditt svar</button>
+
+            <p id="feedback"></p>
+            <p id="score">Poäng: 0</p>
+        </div>
+    </div>
+</body>
+
+</html>

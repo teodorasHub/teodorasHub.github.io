@@ -1,0 +1,140 @@
+<!--Teodora Kovacevic, teko5467-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diskussion</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- JS-bibliotek och egna skript, 
+     quiz som hanterar logiken bakom quizzet, 
+     och drag som gör att fönstret kan flyttas runt -->
+    <script src="js/drag.js"></script>
+    <script src="js/quiz.js"></script>
+</head>
+
+<body>
+
+    <div class="xp-window">
+        <nav class="xp-titlebar">
+            <div class="xp-start">Teodora</div>
+
+            <div class="xp-menu">
+                <a href="index.html" class="xp-button">Hem</a>
+                <a href="about.html" class="xp-button">Om mig</a>
+                <a href="projects.html" class="xp-button">Diskussion</a>
+                <a href="quiz.html" class="xp-button">Big-O Quiz</a>
+                <a href="mathgame.html" class="xp-button">Matematikspel</a>
+                <a href="plantgame.html" class="xp-button">Plant Game</a>
+                <a href="plantGameDiscussion.html" class="xp-button">Om PlantGame</a>
+            </div>
+        </nav>
+
+        <div class="xp-content discussion">
+
+            <h1>Om Big-O Quiz</h1>
+
+            <h2>Syfte</h2>
+            <p>
+                Jag har byggt ett interaktivt quiz i JavaScript där användaren får analysera små
+                kodexempel i Java och välja rätt tidskomplexitet enligt Big-O-notation. Målet med
+                lösningen var att göra något enkelt, pedagogiskt och lite lekfullt snarare än
+                tekniskt avancerat. Quizet fungerar som ett övningsverktyg där man tränar på att
+                förstå hur olika algoritmer växer i tid beroende på indata, istället för att bara
+                memorera teorin.
+            </p>
+
+            <h2>Hur det fungerar</h2>
+            <p>
+                Hela applikationen körs direkt i webbläsaren med HTML, CSS och JavaScript
+                tillsammans med jQuery, utan någon backend. Alla frågor lagras i en array av
+                objekt där varje objekt innehåller ett kodexempel, svarsalternativ, index för rätt
+                svar samt en kort förklaring. Detta gör strukturen flexibel och gör det enkelt att
+                lägga till eller ändra frågor utan att behöva skriva om logiken.
+            </p>
+
+            <p>
+                När en fråga visas genereras innehållet dynamiskt med JavaScript. Funktionen
+                showQuestion() skriver ut koden i ett &lt;pre&gt; element och skapar
+                svarsalternativen automatiskt. När användaren klickar på ”Svara” jämförs valt
+                alternativ med rätt svar, feedback och förklaring visas och frågan låses så att
+                man inte kan ändra i efterhand. Därefter kan man själv gå vidare med knappen
+                ”Nästa fråga”. I slutet visas total poäng samt möjlighet att starta om utan att
+                ladda om sidan.
+            </p>
+
+            <h2>Styrkor</h2>
+            <p>
+                En styrka med lösningen är att den är enkel och tydlig att förstå. All logik är
+                samlad i ett script och frågorna är separerade från själva funktionerna, vilket gör
+                koden lätt att underhålla och bygga vidare på. Applikationen kräver ingen server
+                eller databas och fungerar direkt lokalt i webbläsaren. Designen är dessutom
+                inspirerad av Windows XP med ett flyttbart fönster, vilket gör quizet mer
+                personligt och roligare att använda jämfört med ett vanligt formulär.
+            </p>
+
+            <h2>Möjliga förbättringar</h2>
+            <p>
+                Det finns flera saker som kan utvecklas vidare. I nuläget används jQuery för
+                DOM-hantering, men samma funktionalitet skulle kunna skrivas i modern vanilla
+                JavaScript för att minska beroenden. Man skulle även kunna lägga till funktioner
+                som timer, slumpmässig ordning på frågor eller att spara highscore i
+                localStorage för att öka variationen.
+            </p>
+
+            <p>
+                En annan förbättring vore att inte lagra alla frågor direkt i koden. Istället skulle
+                de kunna hämtas dynamiskt från ett API, en JSON-fil eller en databas. Då blir det
+                enklare att uppdatera och utöka quizet utan att ändra själva programmet, och man
+                skulle kunna skapa en större frågebank eller till och med generera nya uppgifter
+                automatiskt.
+            </p>
+
+            <h2>Sammanfattning</h2>
+            <p>
+                Sammanfattningsvis är quizet en enkel klientbaserad applikation med fokus på
+                tydlig kod, pedagogiska förklaringar och ett lekfullt gränssnitt. Lösningen fungerar
+                bra för mindre övningsspel och visar hur man med grundläggande webtekniker kan
+                skapa en interaktiv och lärande applikation. Med några vidareutvecklingar skulle
+                den dock kunna bli ännu mer flexibel och funktionsrik.
+            </p>
+            
+            <h1>Om Mattespelet</h1>
+
+            <p>
+                Mattespelet är integrerat i min XP-inspirerade portfolio, det visas i ett separat
+                fönster (xp-window) som kan flyttas runt på skärmen. Knappar och inputfält följer
+                samma visuella stil som övriga delar av portfolion för att skapa en konsekvent
+                användarupplevelse. Jag valde att använda radio knappar för att användaren enkelt
+                ska kunna välja vilket räknesätt som ska användas.
+                <br><br>
+                Koden är uppdelad i tre delar: HTML, CSS och JavaScript. HTML-filen (mathgame.html)
+                skapar själva strukturen för spelet, med rubrik, matematiskt uttryck, inputfält,
+                knappar och poängvisning. CSS-filen (mathgame.css) hanterar spelets utseende, med
+                XP-inspirerade färger, skuggor och knappar som matchar övriga portfolion. JavaScript
+                filen (mathgame.js) innehåller spelets logik. Den ansvarar för att generera
+                slumpmässiga matematiska uttryck, beräkna korrekt svar, uppdatera DOM med frågan,
+                kontrollera användarens svar, ge feedback och uppdatera poäng. Den gör det även
+                möjligt att starta om spelet utan att ladda om sidan.
+                <br><br>
+                En central funktion är genereraUttryck, som skapar två slumpmässiga tal och bygger
+                ett matematiskt uttryck baserat på användarens valda räknesätt. För subtraktion
+                kontrolleras att det första talet är större än det andra, och om det inte är det byts
+                talen plats med syntaxen [tal1, tal2] = [tal2, tal1]. Detta är ett enkelt sätt att
+                undvika negativa resultat. Funktionen kontrolleraSvar jämför användarens svar med det
+                korrekta och uppdaterar poängen, poängen ökar vid rätt svar och minskar vid fel.
+                <br><br>
+                För framtida förbättringar skulle spelet kunna utökas med division och hantering av
+                decimaler, eller timers för att öka utmaningen.
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
